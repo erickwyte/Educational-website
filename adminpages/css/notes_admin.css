@@ -1,0 +1,230 @@
+/* notes_admin.css */
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6efe6; /* Light green background for Dasaplus */
+    color: #003300; /* Dasaplus dark green */
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card styles */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 51, 0, 0.1); /* Dasaplus dark green shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 51, 0, 0.2);
+}
+
+/* Headings */
+h2 {
+    color: #003300;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input group with icons */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    color: #006400; /* Dasaplus green */
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+select,
+.file-input input[type="file"] {
+    width: 100%;
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem; /* Space for icon */
+    border: 2px solid #006400; /* Dasaplus green border */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f5fff5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+.file-input input[type="file"]:focus {
+    outline: none;
+    border-color: #003300;
+    box-shadow: 0 0 8px rgba(0, 51, 0, 0.2);
+}
+
+/* File input specific styling */
+.file-input {
+    position: relative;
+}
+
+.file-input input[type="file"] {
+    padding: 0.8rem; /* Override padding for file input */
+}
+
+.file-input input[type="file"]::-webkit-file-upload-button {
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-input input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #003300;
+}
+
+/* Buttons */
+button {
+    background-color: #006400; /* Dasaplus green */
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #003300;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Messages */
+.message {
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #006400;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #dc3545;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a2b1a; /* Darker green for dark mode */
+        color: #e6efe6;
+    }
+
+    .card {
+        background-color: #2a3b2a;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        color: #e6efe6;
+    }
+
+    input[type="text"],
+    select,
+    .file-input input[type="file"] {
+        background-color: #3a4b3a;
+        border-color: #006400;
+        color: #e6efe6;
+    }
+
+    .file-input input[type="file"]::-webkit-file-upload-button {
+        background-color: #006400;
+    }
+
+    button {
+        background-color: #006400;
+    }
+
+    button:hover {
+        background-color: #003300;
+    }
+
+    .success {
+        background-color: #2d6a4f;
+        border-color: #006400;
+        color: #d8f3dc;
+    }
+
+    .error {
+        background-color: #641220;
+        border-color: #dc3545;
+        color: #ffb3b8;
+    }
+}

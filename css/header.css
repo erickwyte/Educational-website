@@ -1,0 +1,144 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s ease; /* Smooth transition for hide/show on scroll */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Logo styling */
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links li a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ff00; /* Green on hover */
+}
+
+/* Sidebar toggle buttons */
+#open-sidebar-button,
+#close-sidebar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
+#open-sidebar-button img,
+#close-sidebar-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Overlay styling */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Show menu button on mobile */
+  #open-sidebar-button {
+    display: block;
+  }
+
+  /* Sidebar styling */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #000000; /* Black background for sidebar */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    z-index: 999;
+    transform: translateX(100%); /* Hidden off-screen */
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Slide in */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+
+  #close-sidebar-button {
+    display: block;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 150px; /* Smaller logo on mobile */
+  }
+
+  .nav-links {
+    width: 200px;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}

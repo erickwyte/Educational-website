@@ -1,0 +1,382 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4f0 0%, #e8ece8 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h2 a {
+    color: #003300;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header h2 a:hover {
+    color: #006400;
+}
+
+/* Form container */
+.form-containerr {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 51, 0, 0.15);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative; /* Establish positioning context */
+}
+
+.form-boxx h2 {
+    color: #003300;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Input group styles */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #003300;
+    box-shadow: 0 0 0 2px rgba(0, 51, 0, 0.2);
+}
+
+/* Password input container */
+.input-password {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+    width: 100%; /* Ensure consistent width */
+}
+
+.input-password input {
+    flex: 1;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    width: 100%; /* Ensure consistent width */
+}
+
+.input-password input:focus {
+    box-shadow: none;
+}
+
+.input-password img {
+    margin-right: 12px;
+}
+
+/* Custom dropdown styles - FIXED Z-INDEX */
+.custom-dropdown {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 5; /* Lower than dropdown but higher than other inputs */
+}
+
+.custom-dropdown label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+#course-search {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#course-search:focus {
+    outline: none;
+    border-color: #003300;
+    box-shadow: 0 0 0 2px rgba(0, 51, 0, 0.2);
+}
+
+.dropdown-list {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000; /* Very high z-index to appear above everything */
+    margin-top: 5px;
+}
+
+.dropdown-item {
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:hover {
+    background: #f0f4f0;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+/* Button styles */
+.form-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #003300;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.form-btn:hover {
+    background-color: #006400;
+}
+
+/* Form text and links */
+.form-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.form-text a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.form-text a:hover {
+    color: #003300;
+    text-decoration: underline;
+}
+
+/* Error message styles */
+#password-error {
+    display: none;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Ensure all inputs have the same width */
+.input-group, .custom-dropdown, .input-password {
+    width: 100%;
+}
+
+.input-group input, .dropdown-container, #course-search {
+    width: 100%;
+}
+
+ /* Custom checkbox styles */
+        .terms-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .terms-checkbox {
+            position: relative;
+            margin-right: 12px;
+            margin-top: 3px;
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: relative;
+            display: inline-block;
+            height: 22px;
+            width: 22px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .terms-checkbox input[type="checkbox"]:checked ~ .checkmark {
+            background-color: #003300;
+            border-color: #003300;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .terms-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .terms-checkbox .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .terms-label {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .terms-label a {
+            color: #006400;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .terms-label a:hover {
+            color: #003300;
+            text-decoration: underline;
+        }
+
+        /* Focus styles for accessibility */
+        .terms-checkbox input[type="checkbox"]:focus ~ .checkmark {
+            box-shadow: 0 0 0 3px rgba(0, 51, 0, 0.2);
+            border-color: #003300;
+        }
+
+        /* Hover effect */
+        .terms-container:hover {
+            background-color: #f0f4f0;
+            border-color: #c0d0c0;
+        }
+
+        /* Animation for the checkmark */
+        @keyframes checkAnim {
+            0% { transform: scale(0.8) rotate(45deg); opacity: 0; }
+            100% { transform: scale(1) rotate(45deg); opacity: 1; }
+        }
+
+        .terms-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+            animation: checkAnim 0.2s ease-out;
+        }
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .form-containerr {
+        padding: 20px;
+    }
+    
+    .form-boxx h2 {
+        font-size: 1.5rem;
+    }
+    
+    .input-group input {
+        padding: 12px;
+    }
+    
+    .form-btn {
+        padding: 12px;
+    }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-containerr {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.input-group, .custom-dropdown {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.input-group:nth-child(1) { animation-delay: 0.1s; }
+.custom-dropdown { animation-delay: 0.2s; }
+.input-group:nth-child(3) { animation-delay: 0.3s; }
+.input-group:nth-child(4) { animation-delay: 0.4s; }
+.input-group:nth-child(5) { animation-delay: 0.5s; }
+.input-group:nth-child(6) { animation-delay: 0.6s; }

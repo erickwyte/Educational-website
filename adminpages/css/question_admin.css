@@ -1,0 +1,251 @@
+    :root {
+            --primary-green: #003300;
+            --primary-green-hover: #006400;
+            --light-green: #e8f5e8;
+            --text-dark: #222;
+            --text-medium: #444;
+            --text-light: #666;
+            --background: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            padding-top: 70px; /* Account for fixed header */
+        }
+
+        .empty {
+            height: 20px;
+        }
+
+        /* Container Styles */
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .admin-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-header h1 {
+            color: var(--primary-green);
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .admin-header p {
+            color: var(--text-medium);
+            font-size: 18px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+            
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .card-header h2 {
+            color: var(--primary-green);
+            font-size: 24px;
+        }
+
+        .card-header i {
+            font-size: 28px;
+            color: var(--primary-green);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: var(--card-bg);
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(0, 80, 0, 0.1);
+        }
+
+        input[type="file"] {
+            padding: 10px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-green-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Message Styles */
+        .message {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .success {
+            background-color: #e8f5e8;
+            color: #2e7d32;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .error {
+            background-color: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #c62828;
+        }
+
+        .message i {
+            font-size: 20px;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                padding: 15px;
+            }
+            
+            .admin-header h1 {
+                font-size: 28px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .card-header h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .admin-header h1 {
+                font-size: 24px;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease;
+        }

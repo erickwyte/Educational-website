@@ -1,0 +1,292 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4f0 0%, #e8ece8 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+/* Main container */
+.empty {
+    height: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Form styles */
+.body {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 51, 0, 0.15);
+}
+
+.body h2 {
+    color: #003300;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* File input groups */
+.file-input-group {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.file-input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #003300;
+}
+
+.file-input-group select,
+.file-input-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.file-input-group select:focus,
+.file-input-group input[type="file"]:focus {
+    outline: none;
+    border-color: #003300;
+    box-shadow: 0 0 0 2px rgba(0, 51, 0, 0.2);
+}
+
+/* Button styles */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="button"] {
+    background-color: #f0f4f0;
+    color: #003300;
+    margin-bottom: 1rem;
+}
+
+button[type="button"]:hover {
+    background-color: #e0ece0;
+    transform: translateY(-2px);
+}
+
+button[type="submit"] {
+    background-color: #003300;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #006400;
+    transform: translateY(-2px);
+}
+
+/* Drag and drop zone */
+#dropZone {
+    padding: 30px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#dropZone.dragover {
+    background: #e3ffe3;
+    border-color: #003300;
+}
+
+/* Progress bar */
+#progress-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#progressBar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+#progressBar::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+#progressBar::-webkit-progress-value {
+    background-color: #003300;
+    transition: width 0.3s;
+}
+
+#progressBar::-moz-progress-bar {
+    background-color: #003300;
+}
+
+#progressText {
+    display: block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: #003300;
+}
+
+/* Message popups */
+.popup-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popup-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.popup-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.popup-message.warning {
+    background-color: #fff8e1;
+    color: #f57c00;
+    border: 1px solid #ffd54f;
+}
+
+/* Thank you note */
+.thank-you-note {
+    background-color: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.thank-you-note h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.thank-you-note p {
+    color: #388e3c;
+    margin-bottom: 0.5rem;
+}
+
+/* Animation for elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.body {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+
+    .body {
+        padding: 1.5rem;
+    }
+
+    .file-input-group {
+        padding: 1rem;
+    }
+    
+.container {
+   border-radius: 0;
+    margin: 0;
+    padding: 0 ;
+}
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .popup-message {
+        padding: 10px;
+    }
+}
+
+/* Focus styles for accessibility */
+button:focus, select:focus, input:focus {
+    outline: 2px solid #003300;
+    outline-offset: 2px;
+}
+
+/* File input styling */
+input[type="file"]::file-selector-button {
+    background-color: #003300;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #006400;
+}

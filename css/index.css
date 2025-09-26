@@ -1,0 +1,813 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.section-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Body background */
+body {
+  background-color: #f8f9fa; /* Light gray background for entire page */
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background:#ffffff; /* Softer green-tinged gradient */
+  padding: 30px 0 60px 0;
+}
+
+.home-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.home-text {
+  flex: 1 1 350px;
+  min-width: 300px;
+  padding: 0 20px;
+}
+
+.home-text h1 {
+  color: #003300; /* Specified green for heading */
+ font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.home-text .lead {
+  font-size: 1.2rem;
+  color: #1a1a1a; /* Darker gray for better contrast */
+  margin-bottom: 12px;
+}
+
+.home-text p {
+  color: #444444; /* Medium gray for secondary text */
+  margin-bottom: 10px;
+}
+
+.home-text button {
+  background: #003300; /* Specified green button */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-text button a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-text button:hover {
+  background: #006400; /* Lighter green on hover - from #002200 */
+}
+
+.home-image {
+  flex: 1 1 300px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.home-image img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* About Dasaplus Section */
+.about-dasaplus {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-dasaplus h2 {
+  color: #003300; /* Specified green heading */
+  margin-bottom: 20px;
+ font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.about-dasaplus p {
+  color: #333333; /* Dark gray text */
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.testimonials-section h2 {
+    color: #003300;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 3rem 2rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 51, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 85%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 280px;
+    scroll-snap-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 51, 0, 0.15);
+}
+
+.testimonial-avatar {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.testimonial-avatar-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.testimonial-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #003300, #006400);
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.testimonial-message {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    position: relative;
+    flex-grow: 1;
+}
+
+.testimonial-message::before {
+    content: '“';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    font-size: 3rem;
+    color: rgba(0, 51, 0, 0.2);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-info {
+    margin-top: auto;
+    width: 100%;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    color: #003300;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.testimonial-university {
+    font-size: 1rem;
+    color: #666;
+    margin-top:0.5rem;
+    opacity: 0.9;
+    font-style: normal;
+}
+
+.testimonial-username {
+    font-size: 0.9rem;
+    color: #006400;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Navigation arrows */
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-nav-button {
+    background: linear-gradient(90deg, #003300, #006400);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 51, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 2rem 0.5rem;
+    }
+    
+    .testimonials-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .testimonial-slider {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        width: 90%;
+        max-width: 320px;
+        padding: 2.5rem 1.5rem 1.5rem;
+        min-height: 250px;
+    }
+    
+    .testimonial-avatar-image,
+    .testimonial-avatar-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .testimonial-message {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .testimonial-message::before {
+        font-size: 2.5rem;
+        top: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        width: 95%;
+        max-width: 280px;
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .testimonial-avatar {
+        top: -25px;
+    }
+    
+    .testimonial-avatar-image,
+    .testimonial-avatar-placeholder {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .testimonial-message {
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation for testimonial cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+/* FAQ Preview Section */
+.faq-preview {
+  padding: 50px 20px;
+  background-color: #f5f5f5; /* Light gray background */
+  text-align: center;
+}
+
+.faq-preview h2 {
+  color: #003300; /* Specified green heading */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq details {
+  background-color: #ffffff; /* White background */
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+.faq summary {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #222222; /* Dark gray text */
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.faq summary::before {
+  content: '+';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #003300; /* Specified green plus sign */
+}
+
+.faq details[open] summary::before {
+  content: '−';
+}
+
+.faq details p {
+  padding: 20px;
+  margin: 0;
+  color: #444444; /* Medium gray text */
+  line-height: 1.7;
+  border-top: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+
+.more-FAQs p {
+  color: #003300; /* Specified green for more FAQs */
+  font-size: 1.5rem;
+}
+
+/* Upload Section */
+.upload-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  text-align: center;
+}
+
+.upload-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upload-section h2 {
+  color: #003300; /* Specified green heading */
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.upload-section p {
+  color: #333333; /* Dark gray text */
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #003300; /* Specified green button */
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.upload-button:hover {
+  background-color: #006400; /* Lighter green on hover - from #002200 */
+}
+
+.upload-section .call-to-action {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #333333; /* Dark gray text */
+}
+
+/* Subscription Section */
+.subscription-section {
+  background: #f5f5f5; /* Light gray background */
+  padding: 48px 0;
+  text-align: center;
+}
+
+.subscription-section h2 {
+  color: #003300; /* Specified green heading */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.subscription-section p {
+  color: #333333; /* Dark gray text */
+  margin-bottom: 18px;
+}
+
+.subscription-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px 16px;
+  border: 1px solid #cccccc; /* Lighter border */
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 220px;
+  outline: none;
+  background-color: #ffffff; /* White input background */
+  color: #333333; /* Dark gray text */
+  transition: border 0.2s;
+}
+
+.subscription-form input[type="email"]:focus {
+  border-color: #003300; /* Specified green border on focus */
+}
+
+.subscription-form button {
+  background: #003300; /* Specified green button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.subscription-form button:hover {
+  background: #006400; /* Lighter green on hover - from #002200 */
+}
+
+/* Featured Resources */
+.featured-resources {
+  background: linear-gradient(135deg, #f0f4f0, #e8ece8); /* Softer green-tinged gradient */
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+}
+
+.featured-resources h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #003300; /* Specified green heading */
+  font-weight: 700;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resource-item {
+  background: #ffffff; /* White background */
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.resource-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.resource-item a {
+  display: block;
+  color: #222222; /* Dark gray text */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.resource-item a:hover {
+  color: #006400; /* Lighter green on hover */
+}
+
+/* How It Works */
+.how-it-works {
+  background: #f8f9fa; /* Light gray background */
+  padding: 3rem 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background: #ffffff; /* White background */
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #333333; /* Dark gray text */
+}
+
+.step span {
+  background: #003300; /* Specified green circle */
+  color: #ffffff; /* White text */
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.step:hover {
+  background-color: #f5f5f5; /* Light gray on hover */
+  transform: scale(1.02);
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(to right, #003300, #006400); /* Green to lighter green gradient */
+  padding: 4rem 1rem;
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  border-radius: 8px;
+  margin: 3rem 1rem;
+}
+
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* White heading */
+}
+
+.cta-btn {
+  background-color: #ffffff; /* White button */
+  color: #003300; /* Specified green text */
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+  transform: translateY(-2px);
+}
+
+.learn-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #075700; /* White link */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn-more-link:hover {
+  text-decoration: underline;
+  color: #ff0000; /* Light gray on hover */
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content.success {
+    border-left: 4px solid green;
+}
+
+.modal-content.error {
+    border-left: 4px solid red;
+}
+
+.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+.hero {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .upload-section h2 {
+    font-size: 22px;
+  }
+
+  .home-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-dasaplus {
+   
+    padding: 50px 0;
+    
+}
+.upload-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+  .home-image img {
+    max-width: 220px;
+  }
+
+    .subscription-section {
+        padding: 20px 10px;
+    }
+
+    .subscription-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .subscription-section p {
+        font-size: 0.9rem;
+    }
+
+    .subscription-form {
+        gap: 10px;
+    }
+
+    .subscription-form input[type="email"],
+    .subscription-form button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+  .testimonial-card {
+    width: 75%;
+    max-width: 320px;
+    padding: 60px 25px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials-section h2 {
+    font-size: 1.8em;
+  }
+
+  .testimonial-card {
+    width: 85%;
+    max-width: 300px;
+    padding: 60px 20px 20px;
+    margin-right: 15px;
+    scroll-margin-right: 15px;
+  }
+
+  .testimonial-message::before {
+    top: -20px;
+  }
+}
+
+
+
+
+
+
+
+

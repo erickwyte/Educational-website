@@ -1,0 +1,587 @@
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0f4f0 0%, #e8ece8 100%);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Main container */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Section styling */
+    .about-us,
+    .mission-vision,
+    .contact,
+    .testimonials-section,
+    .faq {
+      margin-bottom: 40px;
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 51, 0, 0.1);
+    }
+
+    /* Headings */
+    h2 {
+      color: #003300;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+ 
+
+    /* About Section */
+    .about-us {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    .about-text {
+      flex: 1;
+      text-align: left;
+      padding: 20px;
+      min-width: 400px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+     
+    }
+
+    /* Mission and Vision */
+    .mission-vision {
+      background: linear-gradient(to bottom, #ffffff, #f0f8f0);
+    }
+
+    .mission-vision h2 {
+      text-align: center;
+    }
+
+    .mission-vision h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .mission-vision p {
+      padding: 10px 0;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Testimonials */
+   .testimonials-section {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.testimonials-section h2 {
+    color: #003300;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 3rem 2rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 51, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 85%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 280px;
+    scroll-snap-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 51, 0, 0.15);
+}
+
+.testimonial-avatar {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.testimonial-avatar-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.testimonial-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #003300, #006400);
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.testimonial-message {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    position: relative;
+    flex-grow: 1;
+}
+
+.testimonial-message::before {
+    content: '“';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    font-size: 3rem;
+    color: rgba(0, 51, 0, 0.2);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-info {
+    margin-top: auto;
+    width: 100%;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    color: #003300;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.testimonial-university {
+    font-size: 1rem;
+    color: #666;
+   margin-top:0.5rem;
+    font-style: normal;
+}
+
+.testimonial-username {
+    font-size: 0.9rem;
+    color: #006400;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Navigation arrows */
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-nav-button {
+    background: linear-gradient(90deg, #003300, #006400);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 51, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 2rem 0.5rem;
+    }
+    
+    .testimonials-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .testimonial-slider {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        width: 90%;
+        max-width: 320px;
+        padding: 2.5rem 1.5rem 1.5rem;
+        min-height: 250px;
+    }
+    
+    .testimonial-avatar-image,
+    .testimonial-avatar-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .testimonial-message {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .testimonial-message::before {
+        font-size: 2.5rem;
+        top: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        width: 95%;
+        max-width: 280px;
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .testimonial-avatar {
+        top: -25px;
+    }
+    
+    .testimonial-avatar-image,
+    .testimonial-avatar-placeholder {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .testimonial-message {
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation for testimonial cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+/* FAQ Container */
+.faq-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.faq-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.faq-header h2 {
+  font-size: 1.5rem;
+  color: #003300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-header i {
+  color: green;
+}
+
+
+
+/* FAQ List */
+.faq-list {
+  margin-top: 15px;
+}
+
+/* FAQ Item */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: green;
+}
+
+.question-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.question-number {
+  background: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 50%;
+}
+
+.faq-icon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Answer (hidden by default) */
+.faq-answer {
+  display: none;
+  padding: 10px 0 0 35px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Open State */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: green;
+}
+
+/* Footer */
+.faq-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.view-all-link {
+  color: green;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-all-link:hover {
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .faq-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faq-search input {
+    width: 100%;
+  }
+}
+
+
+    /* Contact Section */
+    .contact {
+      background: linear-gradient(to bottom, #ffffff, #f0f8f0);
+    }
+
+    .contact h2 {
+      text-align: center;
+    }
+
+    .contact h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .contact p span {
+      font-weight: 600;
+      color: #003300;
+    }
+
+    .contact a {
+      color: #006400;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #003300;
+      text-decoration: underline;
+    }
+
+          /* Footer */
+    footer {
+      background-color: var(--background);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      border-top: 1px solid #000000;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .about-us {
+        flex-direction: column;
+        text-align: center;
+      }
+      .main-container {
+        padding: 0 ;
+      }
+
+      .about-text {
+        min-width: 100%;
+        padding: 15px;
+      }
+
+      .testimonial-card {
+        width: 75%;
+        max-width: 320px;
+        padding: 60px 25px 25px;
+      }
+
+      .mission-vision h2::after,
+      .faq h2::after,
+      .contact h2::after {
+        left: 0;
+        transform: none;
+      }
+      .about-us, .mission-vision, .contact, .testimonials-section, .faq {
+    
+    border-radius: 0;
+     box-shadow: none;
+    }
+    .faq-container{
+       border-radius: 0;
+     box-shadow: none;
+    }
+  }
+
+
+    @media (max-width: 576px) {
+      .testimonials-section h2 {
+        font-size: 1.5rem;
+      }
+      
+      .testimonial-card {
+        width: 85%;
+        max-width: 300px;
+        padding: 60px 20px 20px;
+        margin-right: 15px;
+        scroll-margin-right: 15px;
+      }
+      
+      .testimonial-message::before {
+        top: -20px;
+      }
+
+      .main-container {
+        padding: 0 ;
+      }
+
+      .about-us,
+      .mission-vision,
+      .contact,
+      .testimonials-section,
+      .faq {
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+    }
