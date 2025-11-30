@@ -1,0 +1,13 @@
+# Prevent direct script execution and block everything except pdf files
+<FilesMatch "\.(php|phar|pht|phtml|php5|php7|php8|pl|py|exe|sh)$">
+    Deny from all
+</FilesMatch>
+
+# Allow direct access to PDFs only (but ensure web server treats them as downloads)
+<FilesMatch "\.(pdf)$">
+    <IfModule mod_headers.c>
+        Header set Content-Disposition attachment
+    </IfModule>
+</FilesMatch>
+
+Options -Indexes

@@ -1,0 +1,9 @@
+<?php
+// Copy this file to config.php and fill in real values or set env vars instead.
+return [
+    'db_host' => 'localhost',
+    'db_name' => 'edu_website',
+    'db_user' => 'root',
+    'db_pass' => '',
+    // IMPORTANT: For production, use environment variables and do NOT commit secrets.
+];
